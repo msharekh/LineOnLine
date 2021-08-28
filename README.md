@@ -17,6 +17,10 @@ Run `ng generate component component-name` to generate a new component. You can 
     - A CSS selector that defines how the component is used in a template
     - Optionally, CSS styles applied to the template
 
+Main components:
+- restaurant
+- customer
+- product
 
 ng generate component restaurant 
 ng g c restaurant-list --spec false
