@@ -10,8 +10,16 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-ng generate component person 
-ng g c recipes-list --spec false
+> Components are the main building block for Angular applications. Each component consists of:
+
+    - An HTML template that declares what renders on the page
+    - A Typescript class that defines behavior
+    - A CSS selector that defines how the component is used in a template
+    - Optionally, CSS styles applied to the template
+
+
+ng generate component restaurant 
+ng g c restaurant-list --spec false
 * install style/script
 npm i bootstrap@3.3.7
 npm i jquery@1.9.1
@@ -22,20 +30,20 @@ npm i jquery@1.9.1
     - logic
     - data
 ```
-CREATE src/app/person/person.component.css (0 bytes)
-CREATE src/app/person/person.component.html (21 bytes)
-CREATE src/app/person/pe.component.spec.ts (628 s)              
-CREATE spp/person/person.compones (269 bytes)   
+CREATE src/app/restaurant/restaurant.component.css (0 bytes)
+CREATE src/app/restaurant/restaurant.component.html (21 bytes)
+CREATE src/app/restaurant/restaurant.component.spec.ts (628 s)              
+CREATE spp/restaurant/restaurant.compones (269 bytes)   
 ```
 1. create a component 
-   - file name person.component.ts
+   - file name restaurant.component.ts
     ```ts
     import {}
     @Component({
-      selector: 'person-div',
+      selector: 'restaurant-div',
       template:
     });     
-    export class PersonComponent{
+    export class RestaurantComponent{
     }
     ```
 2. register in module
@@ -43,7 +51,7 @@ CREATE spp/person/person.compones (269 bytes)
    ```ts
   declarations:[
     AppComponent,
-    PersonComponent
+    RestaurantComponent
   ]
    ```  
 3. add element in html markup 
