@@ -23,7 +23,7 @@ Main components:
 - product
 
 ng generate component restaurant 
-ng g c restaurant-list --spec false
+ng g c restaurant --spec false
 * install style/script
 npm i bootstrap@3.3.7
 npm i jquery@1.9.1
