@@ -10,6 +10,48 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+ng generate component person 
+ng g c recipes-list --spec false
+* install style/script
+npm i bootstrap@3.3.7
+npm i jquery@1.9.1
+```
+- module (module1)
+  - component (person)
+    - html
+    - logic
+    - data
+```
+CREATE src/app/person/person.component.css (0 bytes)
+CREATE src/app/person/person.component.html (21 bytes)
+CREATE src/app/person/pe.component.spec.ts (628 s)              
+CREATE spp/person/person.compones (269 bytes)   
+```
+1. create a component 
+   - file name person.component.ts
+    ```ts
+    import {}
+    @Component({
+      selector: 'person-div',
+      template:
+    });     
+    export class PersonComponent{
+    }
+    ```
+2. register in module
+   - add to file app.module.ts
+   ```ts
+  declarations:[
+    AppComponent,
+    PersonComponent
+  ]
+   ```  
+3. add element in html markup 
+   - add to app.component.html
+   ```html
+    <h3>Person Page </h3>
+   ```
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
