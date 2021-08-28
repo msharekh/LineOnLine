@@ -1,19 +1,46 @@
-<!-- nav -->
-<nav class="navbar navbar-expand navbar-dark bg-dark">
-  <div class="navbar-nav">
-      <a class="nav-item nav-link" routerLink="/">Home</a>
-      <a class="nav-item nav-link" routerLink="/login">Login</a>
-      <a class="nav-item nav-link" routerLink="/register">Register</a>
-  </div>
-</nav>
 
-<!-- main content container -->
-<div class="jumbotron">
-  <div class="container">
-      <div class="row">
-          <div class="col-sm-8 offset-sm-2">
-              <router-outlet></router-outlet>
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title Page</title>
+
+    <!-- Bootstrap CSS -->
+ 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+ 
+    
+    
+    
+    <!-- main content container -->
+    <div class="jumbotron">
+      <div class="container">
+        <!-- jQuery -->
+     <!-- Bootstrap JavaScript -->
+     <!-- nav -->
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <div class="navbar-nav">
+          <a class="nav-item nav-link" routerLink="/">Home</a>
+          <a class="nav-item nav-link" routerLink="/login">Login</a>
+          <a class="nav-item nav-link" routerLink="/register">Register</a>
+      </div>
+    </nav>
+          <div class="row">
+              <div class="col-sm-8 offset-sm-2">
+                  <router-outlet></router-outlet>
+              </div>
           </div>
       </div>
-  </div>
-</div>
+    </div>
+  </body>
+</html>
+
