@@ -12,4 +12,10 @@ export class RestaurantComponent implements OnInit {
   ngOnInit() {
   }
 
+  name: string = "Steve";
+
+  greet(): void {
+      alert("Hello " + this.name);
+  };
+
 }
