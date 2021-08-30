@@ -27,4 +27,10 @@ body {
     padding-bottom: 29%;   
   }
 
+  .nav-link-text{
+    font-size: 2rem;
+  }
  
+  .content-bg{
+    background-color: #eee;
+  }
