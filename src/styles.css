@@ -16,3 +16,15 @@ body {
 .navbar-dark .navbar-nav .nav-link {
     color: #dae0e5;
 }
+.jumbotron {
+    background-image: url("src\img\people-food-court-cartoon-characters-shopping-mall-cafe-order-pizza.jpg");
+    background-size: cover;
+    /* -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%; */
+    margin-bottom: 32px;
+    padding-bottom: 29%;   
+  }
+
+ 
