@@ -68,7 +68,7 @@ package.json file:
  },
 Next, head back to your command-line interface and run the generate script using the following
 mmand:
-$ npm run generate
+```$ npm run generate```
 finally, run the REST API server by executing the following command:
 $ npm run server
 
