@@ -12,6 +12,75 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ```npm run server```
 
+## Setting up a (Fake) JSON REST API
+you can either use an external API service, create a real REST API server or create a fake API
+using json-server. In this example we’ll use the last approach. So head over to a new command-line
+interface and start by installing json-server from npm in your project:
+`$ cd ~/ngstore`
+`$ npm install - save json-server`
+mkdir server
+`$ cd server`
+In the server folder, create a database.json file and add the following JSON object:
+
+database.json file:
+```
+{
+"products": []
+}
+```
+
+```
+cd ..
+$ npm install faker - save
+```
+generate.js file:
+```var faker = require('faker');
+var database = { products: []};
+for (var i = 1; i<= 300; i++) {
+database.products.push({
+id: i,
+name: faker.commerce.productName(),
+description: faker.lorem.sentences(),
+price: faker.commerce.price(),
+imageUrl: "https://source.unsplash.com/1600x900/?product",
+ quantity: faker.random.number()
+ });
+ }
+ console.log(JSON.stringify(database));```
+
+
+package.json file:
+
+"scripts": {
+"ng": "ng",
+"start": "ng serve",
+"build": "ng build",
+"test": "ng test",
+"lint": "ng lint",
+"e2e": "ng e2e",
+"generate": "node ./server/generate.js > ./server/database.json",
+"server": "json-server - watch ./server/database.json"
+ },
+Next, head back to your command-line interface and run the generate script using the following
+mmand:
+$ npm run generate
+finally, run the REST API server by executing the following command:
+$ npm run server
+
+These are the API endpoints we’ll be able to use via our JSON REST API server:
+• GET /products for getting the products,
+• GET /products/<id> for getting a single product by id,
+• POST /products for creating a new product,
+• PUT /products/<id> for updating a product by id,
+• PATCH /products/<id> for partially updating a product by id,
+
+
+## Setting up Angular HttpClient in our Example
+Project
+
+
+
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
