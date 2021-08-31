@@ -191,6 +191,9 @@ ngStore
 <router-outlet></router-outlet>
 ```
 
+## Consuming the JSON REST API with Angular HttpClient
+
+
 
 ## Build
 
