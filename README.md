@@ -144,6 +144,41 @@ CREATE spp/restaurant/restaurant.compones (269 bytes)
     <h3>Person Page </h3>
    ```
 
+## Styling the UI with Angular Material
+
+```ng add @angular/material```
+
+Next, open the src/styles.css file and add a theme:
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+
+import { MatToolbarModule,
+2 MatIconModule,
+3 MatCardModule,
+4 MatButtonModule,
+5 MatProgressSpinnerModule } from '@angular/material';
+We imported the following modules:
+• MatToolbar¹³ that provides a container for headers, titles, or actions.
+• MatCard¹⁴ that provides a content container for text, photos, and actions in the context of a
+single subject.
+• MatButton¹⁵ that provides a native <button> or <a> element enhanced with Material Design
+styling and ink ripples.
+• MatProgressSpinner¹⁶ that provides a circular indicator of progress and activity.
+
+
+imports: [
+8 ....
+9 ...
+10 ....
+11 BrowserAnimationsModule,
+12 MatToolbarModule,
+13 MatIconModule,
+14 MatButtonModule,
+15 MatCardModule,
+16 MatProgressSpinnerModule
+17 ],
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
