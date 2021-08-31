@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { appRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
@@ -26,7 +28,8 @@ import { CuisineComponent } from './cuisine/cuisine.component';
   ],
   imports: [
     BrowserModule,
-    appRoutingModule
+    appRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
