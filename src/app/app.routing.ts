@@ -6,6 +6,7 @@ import { RegisterComponent } from './register';
 
 import { ProductComponent } from './product';
 import { RestaurantComponent } from './restaurant';
+import { CuisineComponent } from './cuisine/cuisine.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
     { path: 'product', component: ProductComponent },
     { path: 'product', component: ProductComponent },
     { path: 'restaurant', component: RestaurantComponent },
-
+    { path: 'cuisine', component: CuisineComponent },
+    
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];
