@@ -3,6 +3,11 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
 
+Angular CLI: 8.0.6
+Node: 10.13.0
+OS: darwin x64
+Angular: 8.0.3
+
 ## Development server
 npm install -g @angular/cli
 

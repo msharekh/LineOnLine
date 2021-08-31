@@ -13,6 +13,7 @@ import { RegisterComponent } from './register';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { ProductComponent } from './product/product.component';
 import { CuisineComponent } from './cuisine/cuisine.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CuisineComponent } from './cuisine/cuisine.component';
 
     RestaurantComponent,
     ProductComponent,
-    CuisineComponent
+    CuisineComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

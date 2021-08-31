@@ -8,6 +8,8 @@ import { ProductComponent } from './product';
 import { RestaurantComponent } from './restaurant';
 import { CuisineComponent } from './cuisine/cuisine.component';
 
+import { AboutComponent } from './about/about.component';
+
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'login', component: LoginComponent },
@@ -18,6 +20,8 @@ const routes: Routes = [
     { path: 'restaurant', component: RestaurantComponent },
     { path: 'cuisine', component: CuisineComponent },
     
+    { path: 'about', component: AboutComponent },
+
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];
