@@ -179,6 +179,19 @@ imports: [
 16 MatProgressSpinnerModule
 17 ],
 
+src/app/app.component.html file
+```html
+<mat-toolbar color="primary">
+<h1>
+ngStore
+</h1>
+<button mat-button routerLink="/">Home</button>
+<button mat-button routerLink="/about">About</button>
+</mat-toolbar>
+<router-outlet></router-outlet>
+```
+
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
