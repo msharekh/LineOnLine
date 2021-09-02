@@ -26,7 +26,7 @@ body {
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
     background-size: 100% 100%; */
-    margin-bottom: 32px;
+    margin-bottom: 50%;
     padding-bottom: 29%;   
   }
 
@@ -39,3 +39,9 @@ body {
   }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.imgStyle{
+ 
+  width: 70%;
+  border-radius: 1em;
+}

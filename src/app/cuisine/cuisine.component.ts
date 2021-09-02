@@ -11,6 +11,9 @@ export class CuisineComponent implements OnInit {
 
   ngOnInit() {
     this.dataService.sendGetRequest().subscribe((data: any[]) => {
+      
+      //return data from calling API
+      
       console.log(data);
       this.products = data;
     })

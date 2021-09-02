@@ -2,6 +2,8 @@ var faker = require('faker');
 var database = {
   products: []
 };
+
+//fill database file
 for (var i = 1; i <= 100; i++) {
   database.products.push({
     id: i,
