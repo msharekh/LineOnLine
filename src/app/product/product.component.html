@@ -14,21 +14,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1010101000018</td>
-            <td>برغر مع جبن</td>
-            <td>26.00 رس</td>
-          </tr>
-          <tr>
-            <td>1010333000018</td>
-            <td>بيتزا خضراوات</td>
-            <td>16.00 رس</td>
-          </tr>
-          <tr>
-            <td>1010101034518</td>
-            <td>شوربة ذرة</td>
-            <td>11.00 رس</td>
-          </tr>
+          <tr *ngFor="let product of products">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+          </tr>          
         </tbody>
       </table>
   </div>
