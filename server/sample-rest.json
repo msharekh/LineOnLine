@@ -1,4 +1,4 @@
-{
+[{
   "Url": "/sa-en/restaurant/canton",
   "imageUrl": "https://hsaa.hsobjects.com/h/restaurants/logos/000/000/001/1a3799fbc74b9f402a294ab123f46f79-small.png",
   "name": "McDonald's KSA"
@@ -141,5 +141,5 @@
 }, {
   "Url": "/sa-en/restaurant/gram",
   "imageUrl": "https://hsaa.hsobjects.com/h/restaurants/logos/000/013/763/5993b8d92040328d862db6455063829d-small.png",
-  "name": "Gram",
-}
+  "name": "Gram"
+}]
