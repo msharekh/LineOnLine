@@ -10,7 +10,7 @@ export class CuisineComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.sendGetRequestAnyProdcut().subscribe((data: any[]) => {
+    this.dataService.sendGetRequestAnyProducts().subscribe((data: any[]) => {
       
       //return data from calling API
       

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-restaurant',
@@ -7,15 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurantComponent implements OnInit {
 
-  constructor() { }
-
+  restaurants = [];
+  constructor(private dataService: DataService) { }
   ngOnInit() {
+   
+
+    this.dataService.sendGetRequestRestaurants().subscribe((data: any[]) => {
+      
+      //return data from calling API
+      
+      console.log(data);
+      this.restaurants = data;
+    })
   }
 
-  name: string = "Steve";
 
-  greet(): void {
-      alert("Hello " + this.name);
-  };
 
 }
