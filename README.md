@@ -88,7 +88,10 @@ Project
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run 
+``` ng generate component component-name```
+
+ to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 > Components are the main building block for Angular applications. Each component consists of:
 
@@ -102,8 +105,8 @@ Main components:
 - customer
 - product
 
-ng generate component restaurant 
-ng g c restaurant --spec false
+`ng generate component restaurant `
+`ng g c restaurant --spec false`
 * install style/script
 npm i bootstrap@3.3.7
 npm i jquery@1.9.1
@@ -210,3 +213,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+https://jsonplaceholder.typicode.com/
+
