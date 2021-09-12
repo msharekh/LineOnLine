@@ -7,13 +7,15 @@
           <th>الاسم</th>
           <th>الرابط</th>
           <!-- <th>الصورة</th> -->
-          <th>2الصورة</th>
+          <th>الصورة</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let restaurant of restaurants">
           <td>{{restaurant.name}}</td>
-          <td>{{restaurant.Url}}</td>
+          <td lang="en" dir="ltr" style="text-align: left;">
+            <a class="nav-link" href="{{restaurant.Url}}">{{restaurant.Url}}</a>
+          </td>
           <!-- <td>{{restaurant.imageUrl}}</td> -->
           <td> <img class="imgStyle" src="{{restaurant.imageUrl}}" />
           </td>
@@ -22,7 +24,3 @@
     </table>
   </div>
 </div>
-
-
-
- 
