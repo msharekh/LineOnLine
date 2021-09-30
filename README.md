@@ -66,18 +66,22 @@ package.json file:
 "generate": "node ./server/generate.js > ./server/database.json",
 "server": "json-server - watch ./server/database.json"
  },
+
+```
 Next, head back to your command-line interface and run the generate script using the following
-mmand:
+command:
 ```$ npm run generate```
+
 finally, run the REST API server by executing the following command:
 $ npm run server
 
 These are the API endpoints we’ll be able to use via our JSON REST API server:
-• GET /products for getting the products,
-• GET /products/<id> for getting a single product by id,
-• POST /products for creating a new product,
-• PUT /products/<id> for updating a product by id,
-• PATCH /products/<id> for partially updating a product by id,
+
+- GET /products for getting the products,
+- GET /products/<id> for getting a single product by id,
+- POST /products for creating a new product,
+- PUT /products/<id> for updating a product by id,
+- PATCH /products/<id> for partially updating a product by id,
 
 
 ## Setting up Angular HttpClient in our Example
