@@ -26,6 +26,16 @@ import {
 
 import { PostsService } from './services/posts.service';
 import { PostComponent } from './post/post.component';
+import { CustomerComponent } from './customer/customer.component';
+import { ItemComponent } from './item/item.component';
+import { CategoryComponent } from './category/category.component';
+import { CartComponent } from './cart/cart.component';
+import { OrderComponent } from './order/order.component';
+import { InvoiceComponent } from './invoice/invoice.component';
+import { UserComponent } from './user/user.component';
+import { SubscriptionComponent } from './subscription/subscription.component';
+import { OptionComponent } from './option/option.component';
+import { SelectionComponent } from './selection/selection.component';
 
 
 @NgModule({
@@ -40,7 +50,17 @@ import { PostComponent } from './post/post.component';
     ProductComponent,
     CuisineComponent,
     AboutComponent,
-    PostComponent
+    PostComponent,
+    CustomerComponent,
+    ItemComponent,
+    CategoryComponent,
+    CartComponent,
+    OrderComponent,
+    InvoiceComponent,
+    UserComponent,
+    SubscriptionComponent,
+    OptionComponent,
+    SelectionComponent
   ],
   imports: [
     BrowserModule,

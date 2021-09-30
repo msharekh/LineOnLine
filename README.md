@@ -105,9 +105,23 @@ Run
     - Optionally, CSS styles applied to the template
 
 Main components:
-- restaurant
-- customer
+ 
 - product
+
+
+- Restaurant - ``` ng generate component restaurant```
+
+- customer  - ``` ng generate component customer ```
+- Item - ``` ng generate component item```
+- Category - ``` ng generate component category```
+- Cart - ``` ng generate component cart```
+- Order - ``` ng generate component order```
+- Invoice - ``` ng generate component invoice```
+- User - ``` ng generate component user```
+- Subscription - ``` ng generate component subscription```
+- Option - ``` ng generate component option```
+- Selection - ``` ng generate component selection```
+
 
 `ng generate component restaurant `
 `ng g c restaurant --spec false`
@@ -125,10 +139,9 @@ CREATE src/app/restaurant/restaurant.component.css (0 bytes)
 CREATE src/app/restaurant/restaurant.component.html (21 bytes)
 CREATE src/app/restaurant/restaurant.component.spec.ts (628 s)              
 CREATE spp/restaurant/restaurant.compones (269 bytes)   
-```
 1. create a component 
    - file name restaurant.component.ts
-    ```ts
+```ts
     import {}
     @Component({
       selector: 'restaurant-div',
@@ -136,18 +149,19 @@ CREATE spp/restaurant/restaurant.compones (269 bytes)
     });     
     export class RestaurantComponent{
     }
-    ```
+```
+
 2. register in module
    - add to file app.module.ts
-   ```ts
+```ts
   declarations:[
     AppComponent,
     RestaurantComponent
   ]
-   ```  
+```  
 3. add element in html markup 
    - add to app.component.html
-   ```html
+```html
     <h3>Person Page </h3>
    ```
 
@@ -156,37 +170,37 @@ CREATE spp/restaurant/restaurant.compones (269 bytes)
 ```ng add @angular/material```
 
 Next, open the src/styles.css file and add a theme:
+```
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-
-
 import { MatToolbarModule,
-2 MatIconModule,
-3 MatCardModule,
-4 MatButtonModule,
-5 MatProgressSpinnerModule } from '@angular/material';
+ MatIconModule,
+ MatCardModule,
+ MatButtonModule,
+ MatProgressSpinnerModule } from '@angular/material';
+
+```
 We imported the following modules:
-• MatToolbar¹³ that provides a container for headers, titles, or actions.
-• MatCard¹⁴ that provides a content container for text, photos, and actions in the context of a
-single subject.
-• MatButton¹⁵ that provides a native <button> or <a> element enhanced with Material Design
-styling and ink ripples.
-• MatProgressSpinner¹⁶ that provides a circular indicator of progress and activity.
+- MatToolbar¹³ that provides a container for headers, titles, or actions.
+- MatCard¹⁴ that provides a content container for text, photos, and actions in the context of a single subject.
+- MatButton¹⁵ that provides a native button or a element enhanced with Material Design styling and ink ripples.
+- MatProgressSpinner¹⁶ that provides a circular indicator of progress and activity.
 
-
+```
 imports: [
-8 ....
-9 ...
-10 ....
-11 BrowserAnimationsModule,
-12 MatToolbarModule,
-13 MatIconModule,
-14 MatButtonModule,
-15 MatCardModule,
-16 MatProgressSpinnerModule
-17 ],
-
+ ....
+ ...
+ ....
+ BrowserAnimationsModule,
+ MatToolbarModule,
+ MatIconModule,
+ MatButtonModule,
+ MatCardModule,
+ MatProgressSpinnerModule
+ ],
+```
 src/app/app.component.html file
+
 ```html
 <mat-toolbar color="primary">
 <h1>
