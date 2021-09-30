@@ -9,6 +9,7 @@ import { RestaurantComponent } from './restaurant';
 import { CuisineComponent } from './cuisine/cuisine.component';
 
 import { AboutComponent } from './about/about.component';
+import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -19,8 +20,9 @@ const routes: Routes = [
     { path: 'product', component: ProductComponent },
     { path: 'restaurant', component: RestaurantComponent },
     { path: 'cuisine', component: CuisineComponent },
-    
+
     { path: 'about', component: AboutComponent },
+    { path: 'post', component: PostComponent },
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }

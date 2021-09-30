@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { appRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'; //for http
 
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
@@ -24,6 +24,10 @@ import {
   MatProgressSpinnerModule
 } from '@angular/material';
 
+import { PostsService } from './services/posts.service';
+import { PostComponent } from './post/post.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,12 +39,13 @@ import {
     RestaurantComponent,
     ProductComponent,
     CuisineComponent,
-    AboutComponent
+    AboutComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
     appRoutingModule,
-    HttpClientModule,
+    HttpClientModule,//for http
     BrowserAnimationsModule,
 
     MatToolbarModule,
@@ -49,7 +54,9 @@ import {
     MatCardModule,
     MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [
+    PostsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
