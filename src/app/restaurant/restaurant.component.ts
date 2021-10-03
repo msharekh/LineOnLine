@@ -9,9 +9,12 @@ import { DataService } from '../data.service';
 export class RestaurantComponent implements OnInit {
 
   restaurants = [];
+  categories = [];
   constructor(private dataService: DataService) { }
   ngOnInit() {
    
+
+      //RESTAURANTS
 
     this.dataService.sendGetRequestRestaurants().subscribe((data: any[]) => {
       
@@ -19,6 +22,15 @@ export class RestaurantComponent implements OnInit {
       
       console.log(data);
       this.restaurants = data;
+    })
+
+    //CATEGORIES
+    this.dataService.sendGetRequestCategories().subscribe((data: any[]) => {
+      
+      //return data from calling API
+      
+      console.log(data);
+      this.categories = data;
     })
   }
 
