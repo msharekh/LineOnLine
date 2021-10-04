@@ -1,0 +1,49 @@
+<form [formGroup]="categoryForm" (ngSubmit)="onSubmit()" action="" method="POST" role="form">
+  <legend>Create Category</legend>
+
+  <div class="form-group">
+    <label for="">category name</label>
+    <input formControlName="categoryname" type="text" class="form-control" id="" placeholder="Input field">
+  </div>
+
+  <div class="form-group">
+    <label for="">restaurant name</label>
+    <input formControlName="restaurantname" type="text" class="form-control" id="" placeholder="Input field">
+  </div>
+
+
+
+  <button type="button" class="btn btn-primary" (click)="onLoadDataClick()">Load Data</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+  
+
+</form>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>FormGroup</th>
+        <th>FormControl (categoryname)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          touched : {{categoryForm.touched}}
+          <br>dirty:{{categoryForm.dirty}}
+          <br>valid:{{categoryForm.valid}}
+          <br>form values: {{categoryForm.value | json}}
+        </td>
+        <td>
+          touched : {{categoryForm.get('categoryname').touched}}
+          <br>dirty:{{categoryForm.get('categoryname').dirty}}
+          <br>valid:{{categoryForm.get('categoryname').valid}}
+          <br>category values: {{categoryForm.get('categoryname').value }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
