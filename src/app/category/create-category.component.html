@@ -4,6 +4,8 @@
   <div class="form-group" [ngClass]="{'has-error': categoryForm.get('categoryname').errors && (categoryForm.get('categoryname').touched || categoryForm.get('categoryname').dirty)}">
     <label for="">category name</label>
     <input formControlName="categoryname" type="text" class="form-control" id="" placeholder="Input field">
+    <label>{{categorynameLength}}</label>
+    
     <span class="help-block" *ngIf="categoryForm.get('categoryname').errors && (categoryForm.get('categoryname').touched || categoryForm.get('categoryname').dirty)">
 
       <span *ngIf="categoryForm.get('categoryname').errors.required">

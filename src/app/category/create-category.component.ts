@@ -8,6 +8,8 @@ import { FormBuilder, FormControlName, FormGroup, Validators } from '@angular/fo
 })
 export class CreateCategoryComponent implements OnInit {
 
+  categorynameLength=0;
+
   categoryForm: FormGroup;
   constructor(private fb:FormBuilder) { }
 
@@ -20,6 +22,11 @@ export class CreateCategoryComponent implements OnInit {
         a2:[''],
         a3:['']
       })
+    });
+
+    this.categoryForm.get('categoryname').valueChanges.subscribe(value =>{
+      console.log(value);
+      this.categorynameLength=value.length;
     });
   }
 
