@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControlName, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControlName, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create-category',
@@ -13,7 +13,7 @@ export class CreateCategoryComponent implements OnInit {
 
   ngOnInit() {
     this.categoryForm = this.fb.group({
-      categoryname: [''],
+      categoryname: ['',Validators.required],
       restaurantname: [''],
       details: this.fb.group({
         a1:[''],
