@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormControlName, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControlName, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-create-category',
@@ -9,16 +9,16 @@ import { FormControl, FormControlName, FormGroup } from '@angular/forms';
 export class CreateCategoryComponent implements OnInit {
 
   categoryForm: FormGroup;
-  constructor() { }
+  constructor(private fb:FormBuilder) { }
 
   ngOnInit() {
-    this.categoryForm = new FormGroup({
-      categoryname: new FormControl(),
-      restaurantname: new FormControl(),
-      details: new FormGroup({
-        a1:new FormControl(),
-        a2:new FormControl(),
-        a3:new FormControl()
+    this.categoryForm = this.fb.group({
+      categoryname: [''],
+      restaurantname: [''],
+      details: this.fb.group({
+        a1:[''],
+        a2:[''],
+        a3:['']
       })
     });
   }
