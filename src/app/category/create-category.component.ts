@@ -26,7 +26,7 @@ export class CreateCategoryComponent implements OnInit {
   onSubmit(): void {
     console.log(this.categoryForm);
     console.log(this.categoryForm.get('categoryname'));
-    console.log(this.categoryForm.controls.categoryname.touched);
+    console.log(this.categoryForm.controls.categoryname.valid);
 
   }
 
