@@ -24,8 +24,8 @@ export class CreateCategoryComponent implements OnInit {
       })
     });
 
-    this.categoryForm.get('categoryname').valueChanges.subscribe(value =>{
-      console.log(value);
+    this.categoryForm.valueChanges.subscribe((value:any) =>{
+      console.log(JSON.stringify(value));
       this.categorynameLength=value.length;
     });
   }
