@@ -95,6 +95,8 @@ Project
 Run 
 ``` ng generate component component-name```
 
+```ng g c category/list-category --spec=false --flat=true```
+
  to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 > Components are the main building block for Angular applications. Each component consists of:

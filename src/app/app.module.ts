@@ -36,6 +36,9 @@ import { UserComponent } from './user/user.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { OptionComponent } from './option/option.component';
 import { SelectionComponent } from './selection/selection.component';
+import { CreateCategoryComponent } from './category/create-category.component';
+import { ListCategoryComponent } from './category/list-category.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -60,7 +63,10 @@ import { SelectionComponent } from './selection/selection.component';
     UserComponent,
     SubscriptionComponent,
     OptionComponent,
-    SelectionComponent
+    SelectionComponent,
+
+    CreateCategoryComponent,
+    ListCategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +78,9 @@ import { SelectionComponent } from './selection/selection.component';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+
+    ReactiveFormsModule
   ],
   providers: [
     PostsService
