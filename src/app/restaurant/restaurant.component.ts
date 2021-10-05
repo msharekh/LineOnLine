@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Restaurant } from 'BI/Restaurant';
 import { DataService } from '../data.service';
 
 @Component({
@@ -13,25 +14,32 @@ export class RestaurantComponent implements OnInit {
   constructor(private dataService: DataService) { }
   ngOnInit() {
    
+    // import { Restaurant } from "./Restaurant";
+
+let r = new Restaurant();
+
+    console.log('testtt');
+console.log(r.Name);
+
 
       //RESTAURANTS
 
-    this.dataService.sendGetRequestRestaurants().subscribe((data: any[]) => {
+    // this.dataService.sendGetRequestRestaurants().subscribe((data: any[]) => {
       
-      //return data from calling API
+    //   //return data from calling API
       
-      console.log(data);
-      this.restaurants = data;
-    })
+    //   console.log(data);
+    //   this.restaurants = data;
+    // })
 
-    //CATEGORIES
-    this.dataService.sendGetRequestCategories().subscribe((data: any[]) => {
+    // //CATEGORIES
+    // this.dataService.sendGetRequestCategories().subscribe((data: any[]) => {
       
-      //return data from calling API
+    //   //return data from calling API
       
-      console.log(data);
-      this.categories = data;
-    })
+    //   console.log(data);
+    //   this.categories = data;
+    // })
   }
 
 
