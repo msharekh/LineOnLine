@@ -28,16 +28,15 @@ import { PostsService } from './services/posts.service';
 import { PostComponent } from './post/post.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { ItemComponent } from './components/item/item.component';
-import { CategoryComponent } from './components/category/category.component';
-import { CartComponent } from './cart/cart.component';
+ import { CartComponent } from './cart/cart.component';
 import { OrderComponent } from './components/order/order.component';
 import { InvoiceComponent } from './components/invoice/invoice.component';
 import { UserComponent } from './user/user.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { OptionComponent } from './components/option/option.component';
 import { SelectionComponent } from './components/selection/selection.component';
-import { CreateCategoryComponent } from './category/create-category.component';
-import { ListCategoryComponent } from './category/list-category.component';
+import { CreateCategoryComponent } from './components/category/create-category/create-category.component';
+import { ListCategoryComponent } from './components/category/list-category/list-category.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { InfoComponent } from './components/info/info.component';
 
@@ -57,7 +56,6 @@ import { InfoComponent } from './components/info/info.component';
     PostComponent,
     CustomerComponent,
     ItemComponent,
-    CategoryComponent,
     CartComponent,
     OrderComponent,
     InvoiceComponent,

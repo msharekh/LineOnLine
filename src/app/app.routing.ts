@@ -10,8 +10,8 @@ import { CuisineComponent } from './components/cuisine/cuisine.component';
 
 import { AboutComponent } from './about/about.component';
 import { PostComponent } from './post/post.component';
-import { CreateCategoryComponent } from './category/create-category.component';
-import { ListCategoryComponent } from './category/list-category.component';
+import { CreateCategoryComponent } from './components/category/create-category/create-category.component';
+import { ListCategoryComponent } from './components/category/list-category/list-category.component';
 import { InfoComponent } from './components/info/info.component';
 
 const routes: Routes = [
