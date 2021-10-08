@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Restaurant } from 'BI/Restaurant';
-import { DataService } from '../data.service';
+import { DataService } from '../../data.service';
 
 @Component({
   selector: 'app-restaurant',

@@ -5,8 +5,8 @@ import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 
 import { ProductComponent } from './product';
-import { RestaurantComponent } from './restaurant';
-import { CuisineComponent } from './cuisine/cuisine.component';
+import { RestaurantComponent } from './components/restaurant';
+import { CuisineComponent } from './components/cuisine/cuisine.component';
 
 import { AboutComponent } from './about/about.component';
 import { PostComponent } from './post/post.component';
