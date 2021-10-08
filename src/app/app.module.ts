@@ -39,6 +39,7 @@ import { SelectionComponent } from './selection/selection.component';
 import { CreateCategoryComponent } from './category/create-category.component';
 import { ListCategoryComponent } from './category/list-category.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { InfoComponent } from './components/info/info.component';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     SelectionComponent,
 
     CreateCategoryComponent,
-    ListCategoryComponent
+    ListCategoryComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
