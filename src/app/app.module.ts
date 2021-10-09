@@ -28,7 +28,7 @@ import { PostsService } from './services/posts.service';
 import { PostComponent } from './post/post.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { ItemComponent } from './components/item/item.component';
- import { CartComponent } from './cart/cart.component';
+import { CartComponent } from './cart/cart.component';
 import { OrderComponent } from './components/order/order.component';
 import { InvoiceComponent } from './components/invoice/invoice.component';
 import { UserComponent } from './user/user.component';
