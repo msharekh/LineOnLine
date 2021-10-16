@@ -226,6 +226,8 @@ ng g c components/restaurant/add-restaurant --flat
 - FormsModule
 - ReactiveFormsModule
 
+import FormsModule into not only the root AppModule, but also into every subModule that uses any angular forms directives.
+
 ```JS
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
