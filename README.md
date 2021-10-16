@@ -2,20 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
-
 Angular CLI: 8.0.6
 Node: 10.13.0
 OS: darwin x64
 Angular: 8.0.3
 
 ## Development server
+
 npm install -g @angular/cli
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-``` ng serve --open ```
+`ng serve --open`
 
-```npm run server```
+`npm run server`
 
 ## Angular 12 + Node js Express + MySQL CRUD
 
@@ -37,19 +37,23 @@ mkdir node-rest-crud-api
  cd node-rest-crud-api
 ```
 
->TODO:initialize #15 node js + express app
+> TODO:initialize #15 node js + express app
+
 ```
 npm init --yes
 
-npm install 
+npm install
 ```
->TODO: #16 Install express js framework and MySQL driver with NPM
+
+> TODO: #16 Install express js framework and MySQL driver with NPM
+
 ```
 npm install express --save
  npm install mysql --save
  npm install body-parser --save
 ```
->TODO: #17 Create database and table for perform crud operation
+
+> TODO: #17 Create database and table for perform crud operation
 
 - Table structure for users
 
@@ -65,6 +69,7 @@ npm install express --save
 ```
 
 - Insert data into database :
+
 ```SQL
 INSERT INTO users (id, name, email, created_at) VALUES
   (1, 'Test', 'test@g.co', '2019-02-28 13:20:20'),
@@ -75,15 +80,11 @@ INSERT INTO users (id, name, email, created_at) VALUES
 
 ```
 
- 
+- TODO: #18 Create server.js file
 
- 
-
- - TODO: #18 Create server.js file
- 
 ```JS
 /* 1- require  :
-  1. express 
+  1. express
   2. body-parser
   3. mysql
   */
@@ -136,7 +137,7 @@ if (error) throw error;
 
 return res.send({ error: false, data: results[0], message: 'users list.' });
 
-// C- Add user 
+// C- Add user
 
 app.post('/add-user', function (req, res) {
 
@@ -190,17 +191,16 @@ app.listen(3000, function () {
 console.log('Node app is running on port 3000');
 ```
 
-
-
 #### Step 2 – Create New Angular App
 
+> install angular app:
 
->install angular app:
 ```
 ng new my-new-app
 ```
 
->install angular material:
+> install angular material:
+
 ```
 ng add @angular/material
 ```
@@ -208,7 +208,8 @@ ng add @angular/material
 #### Step 3 – Create Components in Angular
 
 TODO: #19 CREATE COMPONENTS OF USER @msharekh
-``` 
+
+```
 ng g c components/add-user
 ng g c components/detail-detail
 ng g c components/users-list
@@ -217,9 +218,11 @@ ng g c components/users-list
 
 #### Step 4 – Import Modules in app.module.ts
 
->open app.module.ts file
+> open app.module.ts file
+
 - FormsModule
 - ReactiveFormsModule
+
 ```JS
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -227,15 +230,19 @@ import { HttpClientModule } from '@angular/common/http';
 
 export class AppModule { }
 ```
+
 #### Step 5 – Create CRUD Routes
->TODO: #20 Create routes - routing.module.ts file @msharekh:
+
+> TODO: #20 Create routes - routing.module.ts file @msharekh:
+
 - NgModule
 - Routes
 - RouterModule
 - UsersListComponent
 - AddUserComponent
 - UserDetailComponent
-- 
+-
+
 ```JS
 import { NgModule } from '@angular/core';
 
@@ -264,12 +271,14 @@ export class AppRoutingModule { }
 
 #### Step 6 – Create Angular Service for REST API Consumption
 
->TODO: #21 go to app/service directory in Angular project and create User.ts class
+> TODO: #21 go to app/service directory in Angular project and create User.ts class
 
 ```
 ng g s service/crud
 ```
+
 > TODO: add the below code in app/service/crud.service.ts file
+
 - Injectable
 - User
 - catchError
@@ -356,9 +365,9 @@ console.log(errorMessage);
 return throwError(errorMessage);
 ```
 
-
 #### Step 7 – Add code In app.component.html
->TODO: src/app/app.component.html 
+
+> TODO: src/app/app.component.html
 
 ```HTML
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -380,8 +389,11 @@ return throwError(errorMessage);
 <router-outlet></router-outlet>
 
 ```
+
 #### Step 8 – Create Operation
->TODO: Add the code in add-user.component.ts
+
+> TODO: Add the code in add-user.component.ts
+
 - Component
 - OnInit
 - NgZone
@@ -426,7 +438,7 @@ this.ngZone.run(() => this.router.navigateByUrl('/users-list'))
 console.log(err);
 ```
 
->TODO: Then, Add the code in add-user.component.html file:
+> TODO: Then, Add the code in add-user.component.html file:
 
 ```HTML
 <div class="row justify-content-center mt-5">
@@ -452,12 +464,14 @@ console.log(err);
 <button class="btn btn-primary btn-block" type="submit">Add User</button>
 ```
 
->TODO: Add the code in users-list.component.ts file:
+> TODO: Add the code in users-list.component.ts file:
 
 //TODO: #14 Add the code in users-list.component.ts file
+
 - Component
 - OnInit
 - CrudService
+
 ```JS
 import { Component, OnInit } from '@angular/core';
 
@@ -483,7 +497,9 @@ this.crudService.deleteUser(id).subscribe((res) => {
 
 this.Users.splice(i, 1);
 ```
->TODO: #22 Add the code in users-list.component.html file:
+
+> TODO: #22 Add the code in users-list.component.html file:
+
 ```HTML
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 
@@ -515,7 +531,9 @@ this.Users.splice(i, 1);
 
 <button class="btn btn-sm btn-danger" (click)="delete(user._id, i)">Delete</button>
 ```
+
 > TODO: #23 Add the code in user-detail.component.ts file:
+
 - Component
 - OnInit
 - NgZone
@@ -572,7 +590,9 @@ this.ngZone.run(() => this.router.navigateByUrl('/users-list'))
 
 console.log(err);
 ```
->TODO: #24 Add the code in user-detail.component.html file:
+
+> TODO: #24 Add the code in user-detail.component.html file:
+
 ```HTML
 <div class="row justify-content-center mt-5">
 
@@ -595,9 +615,8 @@ console.log(err);
 <button class="btn btn-primary btn-block" type="submit">Update</button>
 ```
 
+## Setting UP a (Fake) JSON REST API
 
-
-## Setting up a (Fake) JSON REST API
 you can either use an external API service, create a real REST API server or create a fake API
 using json-server. In this example we’ll use the last approach. So head over to a new command-line
 interface and start by installing json-server from npm in your project:
@@ -608,6 +627,7 @@ mkdir server
 In the server folder, create a database.json file and add the following JSON object:
 
 database.json file:
+
 ```
 {
 "products": []
@@ -618,8 +638,10 @@ database.json file:
 cd ..
 $ npm install faker - save
 ```
+
 generate.js file:
-```var faker = require('faker');
+
+````var faker = require('faker');
 var database = { products: []};
 for (var i = 1; i<= 300; i++) {
 database.products.push({
@@ -647,10 +669,11 @@ package.json file:
 "server": "json-server - watch ./server/database.json"
  },
 
-```
+````
+
 Next, head back to your command-line interface and run the generate script using the following
 command:
-```$ npm run generate```
+`$ npm run generate`
 
 finally, run the REST API server by executing the following command:
 $ npm run server
@@ -663,21 +686,20 @@ These are the API endpoints we’ll be able to use via our JSON REST API server:
 - PUT /products/<id> for updating a product by id,
 - PATCH /products/<id> for partially updating a product by id,
 
+## Setting UP Angular HttpClient in our Example
 
-## Setting up Angular HttpClient in our Example
 Project
 
 test
 
-
 ## Code scaffolding
 
-Run 
-``` ng generate component component-name```
+Run
+` ng generate component component-name`
 
-```ng g c category/list-category --spec=false --flat=true```
+`ng g c category/list-category --spec=false --flat=true`
 
- to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 > Components are the main building block for Angular applications. Each component consists of:
 
@@ -687,29 +709,29 @@ Run
     - Optionally, CSS styles applied to the template
 
 Main components:
- 
+
 - product
 
+- Restaurant - ` ng generate component restaurant`
 
-- Restaurant - ``` ng generate component restaurant```
-
-- customer  - ``` ng generate component customer ```
-- Item - ``` ng generate component item```
-- Category - ``` ng generate component category```
-- Cart - ``` ng generate component cart```
-- Order - ``` ng generate component order```
-- Invoice - ``` ng generate component invoice```
-- User - ``` ng generate component user```
-- Subscription - ``` ng generate component subscription```
-- Option - ``` ng generate component option```
-- Selection - ``` ng generate component selection```
-
+- customer - `ng generate component customer`
+- Item - ` ng generate component item`
+- Category - ` ng generate component category`
+- Cart - ` ng generate component cart`
+- Order - ` ng generate component order`
+- Invoice - ` ng generate component invoice`
+- User - ` ng generate component user`
+- Subscription - ` ng generate component subscription`
+- Option - ` ng generate component option`
+- Selection - ` ng generate component selection`
 
 `ng generate component restaurant `
 `ng g c restaurant --spec false`
-* install style/script
-npm i bootstrap@3.3.7
-npm i jquery@1.9.1
+
+- install style/script
+  npm i bootstrap@3.3.7
+  npm i jquery@1.9.1
+
 ```
 - module (module1)
   - component (person)
@@ -717,41 +739,45 @@ npm i jquery@1.9.1
     - logic
     - data
 ```
+
 CREATE src/app/restaurant/restaurant.component.css (0 bytes)
 CREATE src/app/restaurant/restaurant.component.html (21 bytes)
-CREATE src/app/restaurant/restaurant.component.spec.ts (628 s)              
-CREATE spp/restaurant/restaurant.compones (269 bytes)   
-1. create a component 
+CREATE src/app/restaurant/restaurant.component.spec.ts (628 s)  
+CREATE spp/restaurant/restaurant.compones (269 bytes)
+
+1. create a component
    - file name restaurant.component.ts
+
 ```ts
     import {}
     @Component({
       selector: 'restaurant-div',
       template:
-    });     
+    });
     export class RestaurantComponent{
     }
 ```
 
 2. register in module
    - add to file app.module.ts
+
 ```ts
-  declarations:[
-    AppComponent,
-    RestaurantComponent
-  ]
-```  
-3. add element in html markup 
+declarations: [AppComponent, RestaurantComponent];
+```
+
+3. add element in html markup
    - add to app.component.html
+
 ```html
-    <h3>Person Page </h3>
-   ```
+<h3>Person Page</h3>
+```
 
 ## Styling the UI with Angular Material
 
-```ng add @angular/material```
+`ng add @angular/material`
 
 Next, open the src/styles.css file and add a theme:
+
 ```
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
@@ -762,7 +788,9 @@ import { MatToolbarModule,
  MatProgressSpinnerModule } from '@angular/material';
 
 ```
+
 We imported the following modules:
+
 - MatToolbar¹³ that provides a container for headers, titles, or actions.
 - MatCard¹⁴ that provides a content container for text, photos, and actions in the context of a single subject.
 - MatButton¹⁵ that provides a native button or a element enhanced with Material Design styling and ink ripples.
@@ -781,22 +809,19 @@ imports: [
  MatProgressSpinnerModule
  ],
 ```
+
 src/app/app.component.html file
 
 ```html
 <mat-toolbar color="primary">
-<h1>
-ngStore
-</h1>
-<button mat-button routerLink="/">Home</button>
-<button mat-button routerLink="/about">About</button>
+  <h1>ngStore</h1>
+  <button mat-button routerLink="/">Home</button>
+  <button mat-button routerLink="/about">About</button>
 </mat-toolbar>
 <router-outlet></router-outlet>
 ```
 
 ## Consuming the JSON REST API with Angular HttpClient
-
-
 
 ## Build
 
@@ -814,6 +839,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-
 https://jsonplaceholder.typicode.com/
-

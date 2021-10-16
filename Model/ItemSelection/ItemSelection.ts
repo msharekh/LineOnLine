@@ -1,5 +1,5 @@
-import { Item } from "./Item";
-import { ItemOption } from "./ItemOption";
+import { Item } from "../Item/Item";
+import { ItemOption } from "./Order/ItemOption";
 
 export class ItemSelection {
 

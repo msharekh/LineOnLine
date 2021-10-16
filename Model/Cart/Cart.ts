@@ -1,6 +1,6 @@
 import { Time } from "@angular/common"
-import { Customer } from "./Customer";
-import { ItemSelection } from "./ItemSelection";
+import { Customer } from "../Customer/Customer";
+import { ItemSelection } from "../ItemSelection/ItemSelection";
 
 export class Cart {
 
