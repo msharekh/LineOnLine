@@ -37,7 +37,7 @@ import { OptionComponent } from './components/option/option.component';
 import { SelectionComponent } from './components/selection/selection.component';
 import { CreateCategoryComponent } from './components/category/create-category/create-category.component';
 import { ListCategoryComponent } from './components/category/list-category/list-category.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InfoComponent } from './components/info/info.component';
 import { AddRestaurantComponent } from './components/restaurant/add-restaurant/add-restaurant.component';
 
@@ -82,7 +82,8 @@ import { AddRestaurantComponent } from './components/restaurant/add-restaurant/a
     MatCardModule,
     MatProgressSpinnerModule,
 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     PostsService
