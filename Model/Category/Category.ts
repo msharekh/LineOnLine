@@ -1,5 +1,5 @@
-import { Item } from "./Item";
-import { Restaurant } from "./Restaurant";
+import { Item } from "../Item/Item";
+import { Restaurant } from "../Restaurant/Restaurant";
 
 export class Category {
 

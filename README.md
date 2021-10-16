@@ -214,6 +214,9 @@ ng g c components/add-user
 ng g c components/detail-detail
 ng g c components/users-list
 
+ng g c components/restaurant/add-restaurant --flat
+
+
 ```
 
 #### Step 4 – Import Modules in app.module.ts

@@ -39,6 +39,7 @@ import { CreateCategoryComponent } from './components/category/create-category/c
 import { ListCategoryComponent } from './components/category/list-category/list-category.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { InfoComponent } from './components/info/info.component';
+import { AddRestaurantComponent } from './components/restaurant/add-restaurant/add-restaurant.component';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { InfoComponent } from './components/info/info.component';
 
     CreateCategoryComponent,
     ListCategoryComponent,
-    InfoComponent
+    InfoComponent,
+    AddRestaurantComponent
   ],
   imports: [
     BrowserModule,
