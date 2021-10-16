@@ -12,4 +12,6 @@ export class AddRestaurantComponent implements OnInit {
   ngOnInit() {
   }
 
+  
+
 }

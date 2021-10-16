@@ -13,6 +13,7 @@ import { PostComponent } from './post/post.component';
 import { CreateCategoryComponent } from './components/category/create-category/create-category.component';
 import { ListCategoryComponent } from './components/category/list-category/list-category.component';
 import { InfoComponent } from './components/info/info.component';
+import { AddRestaurantComponent } from './components/restaurant/add-restaurant/add-restaurant.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -21,7 +22,11 @@ const routes: Routes = [
 
     { path: 'product', component: ProductComponent },
     { path: 'product', component: ProductComponent },
+
     { path: 'restaurant', component: RestaurantComponent },
+    { path: 'add-restaurant', component: AddRestaurantComponent },
+
+    
     { path: 'cuisine', component: CuisineComponent },
 
     { path: 'about', component: AboutComponent },
@@ -33,7 +38,7 @@ const routes: Routes = [
     { path: 'info', component: InfoComponent },
 
     // otherwise redirect to home
-    { path: '**', redirectTo: 'create-category' }
+    { path: '**', redirectTo: 'add-restaurant' }
 ];
 
 export const appRoutingModule = RouterModule.forRoot(routes);
