@@ -24,31 +24,32 @@ export class CreateCategoryComponent implements OnInit {
       })
     });
 
-    this.categoryForm.valueChanges.subscribe((value:any) =>{
-      console.log(JSON.stringify(value));
-      this.categorynameLength=value.length;
-    });
+    // this.categoryForm.valueChanges.subscribe((value:any) =>{
+    //   console.log(JSON.stringify(value));
+    //   this.categorynameLength=value.length;
+    // });
   }
 
   onSubmit(): void {
-    console.log(this.categoryForm);
-    console.log(this.categoryForm.get('categoryname'));
-    console.log(this.categoryForm.controls.categoryname.valid);
+    // console.log(this.categoryForm);
+    console.log(this.categoryForm.get('categoryname').value);
+    console.log(this.categoryForm.get('restaurantname').value);
+    // console.log(this.categoryForm.controls.categoryname.valid);
 
   }
 
-  onLoadDataClick(): void {
-    console.log(this.categoryForm);
+  // onLoadDataClick(): void {
+  //   console.log(this.categoryForm);
 
-    this.categoryForm.setValue({
-      categoryname: 'Ch Burger',
-      restaurantname: 'Hardeez',
-      details:{
-        a1:'11111',
-        a2:'22222',
-        a3:'33333'
-      }
-    })
-  }
+  //   this.categoryForm.setValue({
+  //     categoryname: 'Ch Burger',
+  //     restaurantname: 'Hardeez',
+  //     details:{
+  //       a1:'11111',
+  //       a2:'22222',
+  //       a3:'33333'
+  //     }
+  //   })
+  // }
 
 }
