@@ -7,6 +7,10 @@ Node: 10.13.0
 OS: darwin x64
 Angular: 8.0.3
 
+## Setup
+- to install  `sudo npm i -g @angular/cli@8.0.3`
+- to check  `ng version`
+
 ## Development server
 
 npm install -g @angular/cli
