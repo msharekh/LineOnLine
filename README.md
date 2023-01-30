@@ -1,5 +1,43 @@
 # LineOnLine
 
+## Project description
+
+The shopping mall's restaurant order application LineOnLine is a convenient way to order food from restaurants in the mall. This application is offering a variety of features to make ordering food easier. Customers can browse menus, customize their orders, add special instructions, and pay for their orders using a secure payment system.
+
+The LineOnLine application is a great way to save time and money. Customers can browse menus at their own pace, without having to wait in line and track their orders in real-time, so they always know when their food will arrive. They can also save money by ordering in bulk, or by taking advantage of special offers and discounts.
+
+### REQUIREMEMTS
+
+senario:
+1.  go to restaurants page 
+2.  choose restaurant
+3.  browse restaurants list
+4.  go to selected restaurant page
+5.  browse restaurant items list
+6.  choose item
+7.  specify specification
+8.  add item to order 
+9.  close order
+10. pay order
+
+
+Interface:
+
+1. page:Home 
+   1. img:Logo
+   2. Menue:sections
+   3. form:Sign-On/SignUp
+2. page:Restaurants
+   1. List:Restaurants
+3. page:Restaurant
+      1. list:R items
+         1. txt:R name
+         2. img:R logo
+      2. form:add R item to Order 
+4. MNG page
+   1. add items to restaurant
+
+## HLD
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
 Angular CLI: 8.0.6
@@ -23,14 +61,16 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Angular 12 + Node js Express + MySQL CRUD
 
-Step 1 – Create RESTful API with Node js + Express + MySQL
-Step 2 – Create New Angular App
-Step 3 – Create Components in Angular
-Step 4 – Import Modules in app.module.ts
-Step 5 – Create CRUD Routes
-Step 6 – Create Angular Service for REST API Consumption
-Step 7 – Add code In app.component.html
-Step 8 – Create Operation
+| STEP   | DESC                                              | STATE |
+| ------ | ------------------------------------------------- | ----- |
+| Step 1 | Create RESTful API with Node js + Express + MySQL |       |
+| Step 2 | Create New Angular App                            | OK    |
+| Step 3 | Create Components in Angular                      | OK    |
+| Step 4 | Import Modules in app.module.ts                   | OK    |
+| Step 5 | Create CRUD Routes                                |       |
+| Step 6 | Create Angular Service for REST API Consumption   |       |
+| Step 7 | Add code In app.component.html                    |       |
+| Step 8 | Create Operation                                  |       |
 
 ### USER
 
