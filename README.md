@@ -897,3 +897,75 @@ https://jsonplaceholder.typicode.com/
 ## Configure the debugger
 We need to initially configure the debugger. To do so, go to the Run and Debug view (⇧⌘D) and select the create a launch.json file link to create a launch.json debugger configuration file. Choose Web App (Edge) from the Select debugger dropdown list. This will create a launch.json file in a new .vscode folder in your project which includes a configuration to launch the website.
 
+
+## Docker
+
+### Getting our App
+Download the ZIP. Open the ZIP file and make sure you extract the contents.
+
+
+
+### Building the App's Container Image
+In order to build the application, we need to use a Dockerfile
+
+```
+FROM node:16
+
+# Create app directory
+WORKDIR /usr/src/app
+
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
+
+RUN npm install
+# If you are building your code for production
+# RUN npm ci --only=production
+
+# Bundle app source
+COPY . .
+
+EXPOSE 8080
+CMD [ "node", "server.js" ]
+```
+
+see exising images
+
+`docker images`
+
+`docker build . -t <your username>/node-web-app`
+
+
+
+### Starting an App Container
+
+
+`docker run -p 49160:8080 -d <your username>/node-web-app`
+
+# Get container ID
+```$ docker ps
+
+# Print app output
+$ docker logs <container id>
+
+# Example
+Running on http://localhost:8080
+```
+
+Now you can call your app using curl (install if needed via: sudo apt-get install curl):
+
+```
+$ curl -i localhost:49160
+
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 12
+ETag: W/"c-M6tWOb/Y57lesdjQuHeB1P/qTV0"
+Date: Mon, 13 Nov 2017 20:53:59 GMT
+Connection: keep-alive
+
+Hello world
+```
+ 
