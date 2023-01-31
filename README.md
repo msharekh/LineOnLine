@@ -23,12 +23,12 @@ senario:
 
 Interface:
 
-1. page:Home 
-   1. img:Logo
-   2. Menue:sections
-   3. form:Sign-On/SignUp
-2. page:Restaurants
-   1. List:Restaurants
+1. page:Home  done 
+   1. img:Logo done
+   2. Menus:sections done
+   3. form:Sign-On/SignUp not-now
+2. page:Restaurants 
+   1. List:Restaurants //TODO:
 3. page:Restaurant
       1. list:R items
          1. txt:R name
@@ -968,4 +968,8 @@ Connection: keep-alive
 
 Hello world
 ```
+
+sudo netstat -lpn |grep :'3000'
+kill -9 1192
+
  
