@@ -105,6 +105,9 @@ npm install express --save
 let m
 ```
 
+
+https://dzone.com/articles/tutorial-connect-your-angular-app-to-mysql
+
 ```SQL
 CREATE TABLE IF NOT EXISTS users (
     id int(11) NOT NULL,
