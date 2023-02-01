@@ -110,6 +110,16 @@ You could think that you can simply connect your SPA (built with Angular, React,
 
 https://dzone.com/articles/tutorial-connect-your-angular-app-to-mysql
 
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'YourRootPassword';
+-- or
+CREATE USER 'foo'@'%' IDENTIFIED WITH mysql_native_password BY 'bar';
+-- then
+FLUSH PRIVILEGES;
+
+ALTER TABLE  events add column Price  DECIMAL(10,2) after name;
+
+
 ```SQL
 CREATE TABLE IF NOT EXISTS users (
     id int(11) NOT NULL,
@@ -977,4 +987,24 @@ Hello world
 sudo netstat -lpn |grep :'3000'
 kill -9 1192
 
- 
+## LineOnLine (Web application)
+### Download 
+`git clone https://github.com/msharekh/LineOnLine.git`
+
+###  Update package and run
+
+`npm update`
+
+`ng serve --open`
+
+`npm run server`
+
+## API - Database 
+### Download 
+`git clone https://github.com/msharekh/timeline-server.git`
+
+###  Update package and run
+
+`npm update`
+
+`node src/index.js`

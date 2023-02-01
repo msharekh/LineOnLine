@@ -8,6 +8,24 @@
 
  <!-- Main content -->
  <section class="content">
+  
+  <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Desc</th>
+            <th>Date</th>
+           </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let event of events">
+             <td>{{event.name}}</td>
+            <td>{{event.description}}</td>
+            <td>{{event.date}}</td>
+           </tr>          
+        </tbody>
+      </table>
+      
 <div *ngFor="let product of products">
 
     <!-- Default box -->
@@ -109,7 +127,11 @@
     </div>
     <!-- /.card -->
 
-</div>
+
+  </div>
+
+  
+  
 
 
 </section>

@@ -46,11 +46,14 @@ export class CreateCategoryComponent implements OnInit {
     console.log(categoryname);
     console.log(restaurantname);
 
+    let today = new Date().toLocaleDateString()
+
+    console.log(today)
     var obj = { 
       owner:categoryname, 
       name:restaurantname ,
       description:"description ........ description", 
-      date:"01-02-2023"
+      date:today
      };
 
     this.dataService.sendGetRequestEVENT(obj).subscribe((data: any[]) => {

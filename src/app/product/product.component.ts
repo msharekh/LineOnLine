@@ -9,16 +9,25 @@ import { DataService } from '../data.service';
 export class ProductComponent implements OnInit {
 
   products = [];
+  events = [];
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
 
-     this.dataService.sendGetRequestProducts().subscribe((data: any[]) => {
+    this.dataService.sendGetRequestProducts().subscribe((data: any[]) => {
       
       //return data from calling API
       
       console.log(data);
       this.products = data;
+    })
+
+     this.dataService.sendGetRequestEVENT_GET().subscribe((data: any[]) => {
+      
+      //return data from calling API
+      
+      console.log(data);
+      this.events = data;
     })
 
   }

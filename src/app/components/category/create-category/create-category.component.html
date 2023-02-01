@@ -1,10 +1,10 @@
 <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()" action="" method="POST" role="form">
-  <legend>Create Category</legend>
+  <legend>Create ORDER</legend>
 
   <div class="form-group" [ngClass]="{'has-error': categoryForm.get('categoryname').errors && (categoryForm.get('categoryname').touched || categoryForm.get('categoryname').dirty)}">
-    <label for="">category name</label>
+    <label for="">ORDER name</label>
     <input formControlName="categoryname" type="text" class="form-control" id="" placeholder="Input field">
-    <label>{{categorynameLength}}</label>
+    <!-- <label>{{categorynameLength}}</label> -->
     
     <span class="help-block" *ngIf="categoryForm.get('categoryname').errors && (categoryForm.get('categoryname').touched || categoryForm.get('categoryname').dirty)">
 

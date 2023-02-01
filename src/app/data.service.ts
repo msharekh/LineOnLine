@@ -45,10 +45,16 @@ export class DataService {
     return this.httpClient.get(this.REST_API_SERVER_CATEGORIES);
 
   }
-   //CATEGORIES
+   //Add Event
    public sendGetRequestEVENT(obj) {
 
     return this.httpClient.post(this.REST_API_SERVER_EVENT,obj);
+
+  }
+   //Get Events
+   public sendGetRequestEVENT_GET() {
+
+    return this.httpClient.get(this.REST_API_SERVER_EVENT);
 
   }
 }
