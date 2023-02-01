@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControlName, FormGroup, Validators } from '@angular/forms';
 
+import { DataService } from '../../../data.service';
+
 //const mysql = require('mysql');
 
 @Component({
@@ -13,7 +15,9 @@ export class CreateCategoryComponent implements OnInit {
   categorynameLength=0;
 
   categoryForm: FormGroup;
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder,private dataService: DataService) { }
+  
+  products = [];
 
   ngOnInit() {
     this.categoryForm = this.fb.group({
@@ -42,11 +46,23 @@ export class CreateCategoryComponent implements OnInit {
     console.log(categoryname);
     console.log(restaurantname);
 
+    var obj = { 
+      owner:categoryname, 
+      name:restaurantname ,
+      description:"description ........ description", 
+      date:"01-02-2023"
+     };
 
-    
+    this.dataService.sendGetRequestEVENT(obj).subscribe((data: any[]) => {
+      
+      //return data from calling API
+      
+      console.log(data);
+      this.products = data;
+    })
 
   }
-
+  
   // onLoadDataClick(): void {
   //   console.log(this.categoryForm);
 

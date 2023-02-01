@@ -12,6 +12,8 @@ export class DataService {
   private REST_API_SERVER_RESTAURANTS = "http://localhost:3000/restaurants";
   private REST_API_SERVER_CATEGORIES = "http://localhost:3000/categories";
 
+  private REST_API_SERVER_EVENT = "http://localhost:8080/event";
+
   //Client
   constructor(private httpClient: HttpClient) { }
 
@@ -41,6 +43,12 @@ export class DataService {
   public sendGetRequestCategories() {
 
     return this.httpClient.get(this.REST_API_SERVER_CATEGORIES);
+
+  }
+   //CATEGORIES
+   public sendGetRequestEVENT(obj) {
+
+    return this.httpClient.post(this.REST_API_SERVER_EVENT,obj);
 
   }
 }
