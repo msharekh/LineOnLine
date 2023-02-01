@@ -105,6 +105,8 @@ npm install express --save
 let m
 ```
 
+import databse fact: 
+You could think that you can simply connect your SPA (built with Angular, React, ... you name it) in a similar way as you connect a Node.js app (or any other server-side app):
 
 https://dzone.com/articles/tutorial-connect-your-angular-app-to-mysql
 

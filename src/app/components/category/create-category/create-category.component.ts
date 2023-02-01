@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControlName, FormGroup, Validators } from '@angular/forms';
 
+//const mysql = require('mysql');
+
 @Component({
   selector: 'app-create-category',
   templateUrl: './create-category.component.html',
@@ -30,11 +32,18 @@ export class CreateCategoryComponent implements OnInit {
     // });
   }
 
+ 
+
   onSubmit(): void {
+    const categoryname = this.categoryForm.get('categoryname').value;
+    const restaurantname = this.categoryForm.get('restaurantname').value;
     // console.log(this.categoryForm);
-    console.log(this.categoryForm.get('categoryname').value);
-    console.log(this.categoryForm.get('restaurantname').value);
     // console.log(this.categoryForm.controls.categoryname.valid);
+    console.log(categoryname);
+    console.log(restaurantname);
+
+
+    
 
   }
 
