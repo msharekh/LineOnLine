@@ -36,7 +36,8 @@ export class CreateCategoryComponent implements OnInit {
     // });
   }
 
- 
+  showMsg: boolean = false;
+
 
   onSubmit(): void {
     const categoryname = this.categoryForm.get('categoryname').value;
@@ -62,6 +63,9 @@ export class CreateCategoryComponent implements OnInit {
       
       console.log(data);
       this.products = data;
+
+      this.showMsg= true;
+      this.categoryForm.reset({});
     })
 
   }

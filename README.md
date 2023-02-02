@@ -119,6 +119,7 @@ FLUSH PRIVILEGES;
 
 ALTER TABLE  events add column Price  DECIMAL(10,2) after name;
 
+brew install telnet  
 
 ```SQL
 CREATE TABLE IF NOT EXISTS users (
