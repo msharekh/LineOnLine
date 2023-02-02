@@ -63,7 +63,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "LineOnLine:build"
+            "browserTarget": "LineOnLine:build",
+            "port": 80
           },
           "configurations": {
             "production": {
