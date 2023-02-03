@@ -1,5 +1,5 @@
 <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()" action="" method="POST" role="form">
-  <legend>Create ORDER</legend>
+  <legend>Create Order</legend>
 
 
   <div *ngIf="showMsg" class="alert alert-success alert-dismissible fade show" role="alert">
@@ -11,22 +11,26 @@
 
 
   <div class="form-group" [ngClass]="{'has-error': categoryForm.get('categoryname').errors && (categoryForm.get('categoryname').touched || categoryForm.get('categoryname').dirty)}">
-    <label for="">ORDER name</label>
+    <label for="">Order</label>
     <input formControlName="categoryname" type="text" class="form-control" id="" placeholder="Input field">
     <!-- <label>{{categorynameLength}}</label> -->
     
     <span class="help-block" *ngIf="categoryForm.get('categoryname').errors && (categoryForm.get('categoryname').touched || categoryForm.get('categoryname').dirty)">
 
       <span *ngIf="categoryForm.get('categoryname').errors.required">
-        category name is required
+        order name is required
       </span>
 
     </span>
   </div>
 
   <div class="form-group">
-    <label for="">restaurant name</label>
+    <label for="">Restaurant</label>
     <input formControlName="restaurantname" type="text" class="form-control" id="" placeholder="Input field">
+  </div>
+  <div class="form-group">
+    <label for="">Price</label>
+    <input formControlName="price" type="text" class="form-control" id="" placeholder="Input field">
   </div>
 
 

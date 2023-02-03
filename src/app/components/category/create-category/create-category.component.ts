@@ -23,6 +23,7 @@ export class CreateCategoryComponent implements OnInit {
     this.categoryForm = this.fb.group({
       categoryname: ['',Validators.required],
       restaurantname: [''],
+      price: [''],
       details: this.fb.group({
         a1:[''],
         a2:[''],
@@ -40,20 +41,23 @@ export class CreateCategoryComponent implements OnInit {
 
 
   onSubmit(): void {
-    const categoryname = this.categoryForm.get('categoryname').value;
+    const ordername = this.categoryForm.get('categoryname').value;
     const restaurantname = this.categoryForm.get('restaurantname').value;
+    const price = this.categoryForm.get('price').value;
     // console.log(this.categoryForm);
     // console.log(this.categoryForm.controls.categoryname.valid);
-    console.log(categoryname);
+    console.log(ordername);
     console.log(restaurantname);
+    console.log(price);
 
     let today = new Date().toLocaleDateString()
 
     console.log(today)
-    var obj = { 
-      owner:categoryname, 
-      name:restaurantname ,
-      description:"description ........ description", 
+    var obj = {     
+      owner:"Mishal", 
+      name:ordername ,
+      price:price ,
+      description:restaurantname, 
       date:today
      };
 
